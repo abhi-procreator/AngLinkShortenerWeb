@@ -1,0 +1,26 @@
+<header>
+  <h1>Link Shortener Website</h1>
+</header>
+<div class="container">
+  <div class="col-md-4">
+      <form #urlForm="ngForm" (ngSubmit)="onSubmitUrlForm(urlForm)" novalidate autocomplete="off"
+      *ngIf="!isFormSubmmited">
+          <input type="url"  name="inputUrl" [(ngModel)]="model.inputUrl" #inputUrl="ngModel" class="form-control" required placeholder="Paste your url here.......">
+
+          <div class="form-error" [hidden]="(inputUrl.valid || inputUrl.pristine) && inputUrl.errors">
+              <p *ngIf="inputUrl.errors">Please Enter URL.</p>
+            </div>
+       <button type="submit" class="btn btn-primary" [disabled]="urlForm.invalid">Generate URL</button>
+      </form>
+
+      <div class="short-url-div" *ngIf="isFormSubmmited">
+          <h2>Generated URL.</h2>
+          <div>
+              <p><a href="shortUrl" #shortUrlElementRef target="_blank" title="click me">{{shortUrl}}</a></p>
+            </div>
+            <div class="short-url-div-btn">
+          <button class="btn btn-primary" (click)="copyUrl(shortUrlElementRef)">{{!isTextCopied ? 'Copy': 'Copied'}}</button>&nbsp;
+          <button  *ngIf="isFormSubmmited" class="btn btn-warning"  (click)="reset()">Reset</button>
+      </div>
+  </div>
+</div>

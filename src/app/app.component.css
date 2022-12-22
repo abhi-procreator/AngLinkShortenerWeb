@@ -1,0 +1,69 @@
+header{
+    text-align: center;
+    background-color: blue;
+    color: aliceblue;
+    padding: 15px;
+    font-family: sans-serif;
+}
+h1{
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+}
+.col-md-4{
+  margin-top: 45px;
+  margin-left: 35%;
+
+}
+.form-control{
+    border: 2px 0 0 2px solid palevioletred;
+}
+::placeholder{
+    text-align: center;
+    font-size: 15px;
+    color: royalblue;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+.form-error{
+    margin: 25px 0 0 100px;
+    color: red;
+    font-size: 20px;
+    font-weight: 700;
+}
+form button{
+    margin: 15px 0 0 110px;
+}
+
+.short-url-div-btn{
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;  
+      
+}
+h2{
+    margin: 15px 0 60px 0;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: blue;
+    background-color: white;
+    border-radius: 10px solid white;
+    padding: 10px;
+    text-align: center;
+}
+ulr{
+    color: blue;
+}
+
+p a{
+    margin: 8px 0 0 60px;
+    font-size: 20px;
+    color: brown;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+p a:hover{
+    color: blue;
+}
+
+
